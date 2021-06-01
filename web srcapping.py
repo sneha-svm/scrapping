@@ -47,6 +47,7 @@ for page_num in range(1, page_num_MAX):
         scrapped_info_list.append(hotel_dict)
         connect.insert_into_table(args.dbname, tuple(hotel_dict.values()))
 
+        #print(hotel_name, hotel_address, hotel_price, hotel_rating, amenities_list)
 
 dataFrame = pandas.DataFrame(scrapped_info_list)
 print("Creating csv file")
